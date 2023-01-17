@@ -1,25 +1,27 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = {
-  entry: "./index.js",
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
+    path: path.resolve(__dirname, "review_build"),
   },
   module: {
     rules: [
       {
-        test: /\.js$/i,
+        test: /.js$/,
         use: ["babel-loader"],
       },
+
       {
-        test: /\.s?css$/i,
+        test: /.css$/,
         use: ["style-loader", "css-loader"],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: "./src/index.html",
     }),
   ],
 };
