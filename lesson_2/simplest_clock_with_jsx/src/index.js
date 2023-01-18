@@ -15,7 +15,7 @@ const timerRender = time => {
   };
 
   const element = (
-    <div classNane="seconds" style={styles}>
+    <div className="seconds" style={styles}>
       {`Now is ${seconds}`}
     </div>
   );
