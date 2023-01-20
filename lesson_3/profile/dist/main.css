@@ -1,0 +1,2 @@
+.profile{margin:auto;display:flex;flex-direction:column;height:50px}.profile__name{display:flex}.profile__birth{opacity:.7}
+body{font-family:Arial,Helvetica,sans-serif}#root{height:100vh;display:flex}.profile{margin:auto;padding:8px;border:3px solid #eee}
