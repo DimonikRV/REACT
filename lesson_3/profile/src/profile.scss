@@ -1,0 +1,14 @@
+.profile {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+
+  &__name {
+    display: flex;
+  }
+
+  &__birth {
+    opacity: 0.7;
+  }
+}
