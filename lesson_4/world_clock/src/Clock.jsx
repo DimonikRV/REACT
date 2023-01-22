@@ -34,5 +34,4 @@ class Clock extends Component {
     );
   }
 }
-// formatDate(getTimeWithOffset(props.offset));
 export default Clock;
