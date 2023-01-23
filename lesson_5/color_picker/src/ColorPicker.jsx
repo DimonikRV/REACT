@@ -12,15 +12,13 @@ class ColorPicker extends React.Component {
       color: '',
     };
   }
-  setText = event => {
-    let titleColor = event.target.style.backgroundColor;
-    titleColor = titleColor.slice(0, 1).toUpperCase() + titleColor.slice(1);
+  setText = (color, event) => {
     this.setState({
-      color: titleColor,
+      color,
     });
   };
 
-  removeText = event => {
+  removeText = (color, event) => {
     this.setState({
       color: '',
     });
@@ -32,28 +30,19 @@ class ColorPicker extends React.Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            style={{
-              backgroundColor: coral,
-            }}
-            onMouseEnter={e => this.setText(e)}
-            onMouseLeave={e => this.removeText(e)}
-          ></button>
+            onMouseOver={e => this.setText('Coral', e)}
+            onMouseOut={e => this.removeText(e)}
+          />
           <button
             className="picker__button picker__button_aqua"
-            style={{
-              backgroundColor: aqua,
-            }}
-            onMouseEnter={e => this.setText(e)}
-            onMouseLeave={e => this.removeText(e)}
-          ></button>
+            onMouseOver={e => this.setText('Aqua', e)}
+            onMouseOut={e => this.removeText(e)}
+          />
           <button
             className="picker__button picker__button_bisque"
-            style={{
-              backgroundColor: bisque,
-            }}
-            onMouseEnter={e => this.setText(e)}
-            onMouseLeave={e => this.removeText(e)}
-          ></button>
+            onMouseOver={e => this.setText('Bisque', e)}
+            onMouseOut={e => this.removeText(e)}
+          />
         </div>
       </div>
     );
