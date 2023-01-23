@@ -9,7 +9,7 @@ class ColorPicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: 'Red',
+      color: '',
     };
   }
   setText = event => {
@@ -22,7 +22,7 @@ class ColorPicker extends React.Component {
 
   removeText = event => {
     this.setState({
-      color: 'Red',
+      color: '',
     });
   };
   render() {
