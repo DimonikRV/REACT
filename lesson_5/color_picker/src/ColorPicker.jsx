@@ -1,9 +1,9 @@
 import React from 'react';
 import './colorpicker.scss';
 
-const coral = 'Coral';
-const aqua = 'Aqua';
-const bisque = 'Bisque';
+const coral = 'coral';
+const aqua = 'aqua';
+const bisque = 'bisque';
 
 class ColorPicker extends React.Component {
   constructor(props) {
