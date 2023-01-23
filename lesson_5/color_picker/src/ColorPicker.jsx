@@ -13,8 +13,8 @@ class ColorPicker extends React.Component {
     };
   }
   setText = event => {
-    const titleColor = event.target.style.backgroundColor;
-
+    let titleColor = event.target.style.backgroundColor;
+    titleColor = titleColor.slice(0, 1).toUpperCase() + titleColor.slice(1);
     this.setState({
       color: titleColor,
     });
