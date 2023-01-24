@@ -1,8 +1,8 @@
 import React from 'react';
 import Info from './Info';
 
-const text1 = "'Price is 500$. Available in 2 colors'";
-const text2 = "'Price is 650$. Not available'";
+const text1 = 'Price is 500$. Available in 2 colors';
+const text2 = 'Price is 650$. Not available';
 
 class Page extends React.Component {
   state = {
