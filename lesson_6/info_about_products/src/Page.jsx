@@ -18,7 +18,7 @@ class Page extends React.Component {
   render() {
     return (
       <div className="page">
-        <Info info={this.state.text} />
+        <Info text={this.state.text} />
         <div className="actions">
           <button className="btn" onClick={() => this.SetText(text1)}>
             IPhone 13

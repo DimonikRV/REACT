@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Info = ({ info }) => {
-  if (!info) {
+const Info = ({ text }) => {
+  if (!text) {
     return null;
   }
-  return <div className="message">{info}</div>;
+  return <div className="message">{text}</div>;
 };
 
 export default Info;
