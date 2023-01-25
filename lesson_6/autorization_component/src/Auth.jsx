@@ -6,30 +6,35 @@ import Logout from './Logout';
 class Auth extends React.Component {
   state = {
     isLogin: false,
+    spinner: false,
   };
   onLoginHandler = e => {
     this.setState({
-      isLogin: true,
+      spinner: true,
     });
+    setTimeout(
+      () =>
+        this.setState({
+          isLogin: true,
+          spinner: false,
+        }),
+      2000,
+    );
   };
+
   onLogoutHandler = e => {
     this.setState({
       isLogin: false,
     });
   };
   render() {
-    return (
-      <>
-        {this.state.isLogin ? (
-          <Spinner size={50} />
-        ) : (
-          <>
-            <Login onLogin={this.onLoginHandler} />
-          </>
-        )}
-        <Logout onLogout={this.onLogoutHandler} isLogin={this.state.isLogin} />
-      </>
-    );
+    let button;
+    if (this.state.isLogin) {
+      button = <Logout onLogout={this.onLogoutHandler} />;
+    } else {
+      button = this.state.spinner ? <Spinner size={50} /> : <Login onLogin={this.onLoginHandler} />;
+    }
+    return <>{button}</>;
   }
 }
 export default Auth;
