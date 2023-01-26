@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserList from './UserList';
+import UserList from './UsersList';
 import './index.scss';
 
 const users = [
