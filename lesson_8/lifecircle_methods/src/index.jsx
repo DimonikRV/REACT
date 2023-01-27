@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Life from './Life';
+import Demo from './Demo';
 
 const rootElem = document.getElementById('root');
 
-ReactDOM.render(<Life number={Math.round(Math.random() * 100)} />, rootElem);
+ReactDOM.render(<Demo />, rootElem);
