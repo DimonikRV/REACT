@@ -1,28 +1,24 @@
-import React from "react";
+import React from 'react';
 
-class Life extends React.Component{
-    constructor(props) {
-        super(props)
-        console.log('constructor: good place to create state')
-    }
-    componentDidMount() {
-        console.log('componentDidMount: API calls, subscriptions')
-    }
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log('souldComponentUpdate(nextProps, nextState):decide to render or not to render')
-    }
-    componentDidUpdate(prevProps, prevState) {
-        console.log('componentDidUpdate(prevProps, prevState): some updates based on new props')
-    }
-    componentWillUnmount() {
-        console.log('componentWillUnmount(): cleanup before DOM related to component will be removed')
-    }
-    render() {
-        return (
-           <div></div>
-       )
-    }
-        
-    
+class Life extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log('constructor: good place to create state');
+  }
+  componentDidMount() {
+    console.log('componentDidMount: API calls, subscriptions');
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('souldComponentUpdate(nextProps, nextState):decide to render or not to render');
+  }
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
+  }
+  componentWillUnmount() {
+    console.log('componentWillUnmount(): cleanup before DOM related to component will be removed');
+  }
+  render() {
+    return console.log('return React element to build DOM');
+  }
 }
-export default Life; 
+export default Life;
