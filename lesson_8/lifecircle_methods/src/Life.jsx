@@ -18,7 +18,8 @@ class Life extends React.Component {
     console.log('componentWillUnmount(): cleanup before DOM related to component will be removed');
   }
   render() {
-    return console.log('return React element to build DOM');
+    console.log('return React element to build DOM');
+    return <div></div>;
   }
 }
 export default Life;
