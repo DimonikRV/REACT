@@ -24,10 +24,10 @@ class Dimensions extends React.Component {
       width,
       height,
     });
-    document.title = `${width} x ${height}`;
+    document.title = `${height} x ${width}`;
   };
   render() {
-    return <div className="dimensions"> {`${this.state.width}px - ${this.state.height}px`}</div>;
+    return <div className="dimensions"> {`${this.state.height}px - ${this.state.width}px`}</div>;
   }
 }
 export default Dimensions;
