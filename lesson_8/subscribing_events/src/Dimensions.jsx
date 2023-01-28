@@ -24,7 +24,7 @@ class Dimensions extends React.Component {
       width,
       height,
     });
-    document.title = `${width} x ${height}`;
+    document.title = `${innerWidth} x ${innerHeight}`;
   };
   render() {
     return <div className="dimensions"> {`${this.state.width}px - ${this.state.height}px`}</div>;
