@@ -16,19 +16,17 @@ class UsersList extends React.Component {
       text: event.target.value.toLowerCase(),
     });
   };
-  usersCounter = () => {
-    const { users } = this.state;
-    this.setState({
-      counter: users.filter(user => user.name.toLowerCase().includes(text)).length(),
-    });
-  };
 
   render() {
+    const usersList = this.state.users.filter(user =>
+      user.name.toLowerCase().includes(this.state.text),
+    );
+    const counter = usersList.length;
     return (
       <div>
-        <Filter filterText={this.state.text} count={this.state.counter} onChange={this.onChange} />
+        <Filter filterText={this.state.text} count={counter} onChange={this.onChange} />
         <ul className="users">
-          {this.state.users.map(user => (
+          {usersList.map(user => (
             <User key={user.id} {...user} />
           ))}
         </ul>
