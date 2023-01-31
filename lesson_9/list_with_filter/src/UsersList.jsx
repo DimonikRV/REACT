@@ -8,7 +8,6 @@ class UsersList extends React.Component {
     this.state = {
       users: props.users,
       text: '',
-      counter: null,
     };
   }
   onChange = event => {
