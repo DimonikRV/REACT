@@ -5,8 +5,8 @@ import Profile from './Profile';
 class Page extends React.Component {
   state = {
     userData: {
-      firstName: null,
-      lastName: null,
+      firstName: '',
+      lastName: '',
     },
   };
 
