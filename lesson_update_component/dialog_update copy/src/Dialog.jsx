@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 class Dialog extends React.Component {
   render() {
@@ -20,15 +19,4 @@ class Dialog extends React.Component {
     );
   }
 }
-Dialog.propTypes = {
-  children: PropTypes.element.isRequired,
-  isOpen: PropTypes.bool,
-  onClose: PropTypes.func.isRequired,
-  title: PropTypes.string,
-
-  Dialog.defaultProps = {
-    title: '',
-    isOpen: false,
-  }
-};
 export default Dialog;
