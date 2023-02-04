@@ -17,6 +17,7 @@ class App extends React.Component {
       isOpen: false,
     });
   };
+
   render() {
     return (
       <div className="app">
