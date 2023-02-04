@@ -12,9 +12,9 @@ class Expand extends React.Component {
           <span className="expand__title">{title}</span>
           <button className="expand__toggle-btn" onClick={onToggler}>
             {isVisible ? (
-              <FontAwesomeIcon icon={faChevronDown} />
-            ) : (
               <FontAwesomeIcon icon={faChevronUp} />
+            ) : (
+              <FontAwesomeIcon icon={faChevronDown} />
             )}
           </button>
         </div>
