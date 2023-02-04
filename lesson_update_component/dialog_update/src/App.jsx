@@ -1,5 +1,6 @@
 import React from 'react';
 import Dialog from './Dialog';
+import './index.scss';
 
 class App extends React.Component {
   state = {
@@ -17,14 +18,13 @@ class App extends React.Component {
     });
   };
   render() {
-    const elem = <p>'Use immutable array methods to work with data. It will help to avoid bugs'</p>;
     return (
       <div className="app">
-        <button class="btn" onClick={this.onShow}>
+        <button className="btn" onClick={this.onShow}>
           Show dialog
         </button>
-        <Dialog title="Recommendation" isOpen={this.state.number} onClose={this.onClose}>
-          {elem}
+        <Dialog title="Recommendation" isOpen={this.state.isOpen} onClose={this.onClose}>
+          <p>Use immutable array methods to work with data. It will help to avoid bugs</p>
         </Dialog>
       </div>
     );
