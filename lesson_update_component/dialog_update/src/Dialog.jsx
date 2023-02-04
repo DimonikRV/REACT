@@ -25,10 +25,10 @@ Dialog.propTypes = {
   isOpen: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string,
-
-  Dialog.defaultProps = {
-    title: '',
-    isOpen: false,
-  }
 };
+Dialog.defaultProps = {
+  title: '',
+  isOpen: false,
+};
+
 export default Dialog;
