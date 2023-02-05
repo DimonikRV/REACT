@@ -6,14 +6,14 @@ const Dialog = ({ children, isOpen, onClose, title }) => {
     return null;
   }
   return (
-    <div class="dialog">
-      <div class="dialog__heading">
-        <h4 class="dialog__title">{title}</h4>
-        <button class="dialog__close-btn" onClick={onClose}>
+    <div className="dialog">
+      <div className="dialog__heading">
+        <h4 className="dialog__title">{title}</h4>
+        <button classNames="dialog__close-btn" onClick={onClose}>
           +
         </button>
       </div>
-      <div class="dialog__content">{children}</div>
+      <div className="dialog__content">{children}</div>
     </div>
   );
 };
