@@ -16,7 +16,7 @@ class Expand extends React.Component {
             )}
           </button>
         </div>
-        {isVisible && <div className="expand__content">{children}</div>}
+        <>{isVisible && <div className="expand__content">{children}</div>}</>
       </div>
     );
   }
