@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Expand extends React.Component {
   render() {
@@ -12,9 +10,9 @@ class Expand extends React.Component {
           <span className="expand__title">{title}</span>
           <button className="expand__toggle-btn" onClick={onToggler}>
             {isVisible ? (
-              <FontAwesomeIcon icon={faChevronUp} />
+              <i className="fas fa-chevron-up"></i>
             ) : (
-              <FontAwesomeIcon icon={faChevronDown} />
+              <i className="fas fa-chevron-down"></i>
             )}
           </button>
         </div>
