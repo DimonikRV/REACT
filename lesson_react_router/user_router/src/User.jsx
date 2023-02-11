@@ -5,6 +5,7 @@ class User extends React.Component {
   state = {
     userData: null,
   };
+
   componentDidMount() {
     const { userId } = useParams();
     this.setUserData(userId);
