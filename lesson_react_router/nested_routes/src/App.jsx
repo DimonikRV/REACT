@@ -8,7 +8,7 @@ const App = () => {
     <div className="page">
       <BrowserRouter>
         <ul className="navigation">
-          <li classNam="navigation__item">
+          <li className="navigation__item">
             <Link to="/">Home</Link>
           </li>
           <li className="navigation__item">
