@@ -6,28 +6,30 @@ class User extends React.Component {
   };
 
   componentDidMount() {
-    setUserData(this.props.match.params.userId);
+    const { match } = this.props;
+    this.setUserData(match.params.userId);
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.match.params.userId !== this.props.match.params.userId) {
-      setUserData(this.props.params.userId);
+    const { match } = this.props;
+    if (prevProps.match.params.userId !== match.params.userId) {
+      this.setUserData(match.params.userId);
     }
   }
 
   fetchUserData = async userId => {
     const response = await fetch(`https://api.github.com/users/${userId}`);
     if (!response.ok) {
-      return null;
+      throw new Error();
     }
     const data = await response.json();
     return data;
   };
 
   setUserData = userId => {
-    this.fetchUserData(userId).then(data =>
+    this.fetchUserData(userId).then(userData =>
       this.setState({
-        userData: data,
+        userData,
       }),
     );
   };
