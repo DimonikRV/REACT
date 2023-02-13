@@ -6,7 +6,7 @@ const ConnectionStatus = () => {
 
   useEffect(() => {
     const handleOnline = event => {
-      const isOnline = event.target.navigator.isOnline;
+      const isOnline = event.target.navigator.onLine;
       setConnection(isOnline);
     };
     window.addEventListener('online', handleOnline);
@@ -15,7 +15,7 @@ const ConnectionStatus = () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOnline);
     };
-  });
+  }, [connection]);
 
   const statusElem = classNames('status', { status_offline: !connection });
   const statusTxt = connection ? 'online' : 'offline';
