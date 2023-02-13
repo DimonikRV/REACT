@@ -15,7 +15,7 @@ const ConnectionStatus = () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOnline);
     };
-  }, [connection]);
+  }, []);
 
   const statusElem = classNames('status', { status_offline: !connection });
   const statusTxt = connection ? 'online' : 'offline';
