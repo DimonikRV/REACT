@@ -3,13 +3,10 @@ import User from './User';
 import Filter from './Filter';
 
 class UsersList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      users: props.users,
-      text: '',
-    };
-  }
+  state = {
+    text: '',
+  };
+
   onChange = event => {
     this.setState({
       text: event.target.value.toLowerCase(),
@@ -17,7 +14,7 @@ class UsersList extends React.Component {
   };
 
   render() {
-    const usersList = this.state.users.filter(user =>
+    const usersList = this.props.users.filter(user =>
       user.name.toLowerCase().includes(this.state.text),
     );
     const counter = usersList.length;
